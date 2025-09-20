@@ -1,13 +1,13 @@
 package dice;
 
+import java.util.Scanner;
+
 public class DiceGameMain {
-    /*
-    I main-metoden skapar du bara en instans av Game-klassen och anropar en metod i
-Game-klassen där spellogiken körs.
-     */
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Game game1 = new Game();
         game1.startGame();
+        scanner.close();
     }
 
     ;

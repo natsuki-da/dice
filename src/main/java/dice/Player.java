@@ -11,7 +11,7 @@ public class Player {
     public void setPlayer() {
         System.out.println("Please write your first name: ");
         firstName = scanner.nextLine();
-        System.out.println("Please write your last name: ");
+        System.out.println("Last name: ");
         lastName = scanner.nextLine();
     }
 
