@@ -7,9 +7,6 @@ public class DiceGameMain {
         Scanner scanner = new Scanner(System.in);
         Game game1 = new Game();
         game1.startGame();
-
+        scanner.close();
     }
-
-    ;
-
 }
