@@ -27,7 +27,7 @@ public class Game {
             System.out.println("The winner is " + player2.getFullName());
             System.out.println("\uD83D\uDC51" + " " + "\uD83D\uDC51" + " " + "\uD83D\uDC51" + " \n");
         } else {
-            System.out.println("\n" + "It's a tie!" + "\n");
+            System.out.println("\nIt's a tie!\n");
         }
     }
 
