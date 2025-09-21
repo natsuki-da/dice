@@ -9,11 +9,21 @@ public class Player {
 
     public void setPlayer() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please write your first name: ");
-        firstName = scanner.nextLine();
-        System.out.println("Last name: ");
-        lastName = scanner.nextLine();
-        //scanner.close();
+        boolean validName = false;
+        while (!validName) {
+            try {
+                System.out.println("Please write your first name: ");
+                firstName = scanner.nextLine();
+                System.out.println("Last name: ");
+                lastName = scanner.nextLine();
+                if (firstName.isEmpty() || lastName.isEmpty()) {
+                    throw new IllegalArgumentException("First name and last name cannot be empty.");
+                }
+                validName = true;
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     public String getFirstName() {
@@ -25,9 +35,8 @@ public class Player {
         return fullName;
     }
 
-    public int addToScore(int score) {
+    public void addToScore(int score) {
         totalScore += score;
-        return totalScore;
     }
 
     public int getScore() {
