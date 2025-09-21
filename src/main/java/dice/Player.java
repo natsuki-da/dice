@@ -6,13 +6,14 @@ public class Player {
     private String firstName;
     private String lastName;
     private int totalScore = 0;
-    Scanner scanner = new Scanner(System.in);
 
     public void setPlayer() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please write your first name: ");
         firstName = scanner.nextLine();
         System.out.println("Last name: ");
         lastName = scanner.nextLine();
+        //scanner.close();
     }
 
     public String getFirstName() {
@@ -26,6 +27,10 @@ public class Player {
 
     public int addToScore(int score) {
         totalScore += score;
+        return totalScore;
+    }
+
+    public int getScore() {
         return totalScore;
     }
 
